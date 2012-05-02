@@ -1,0 +1,119 @@
+% Definition de l'affichage de l'ensemble des codes
+\definecolor{white}{rgb}{1,1,1}
+\definecolor{monbleu}{rgb}{0.03, 0.45, 0}
+\lstset{
+	language=Java,
+	backgroundcolor=\color{white},
+	basicstyle=\small,
+	commentstyle=\color{monbleu},
+	keywordstyle=\color{blue}\bfseries\emph
+}
+
+\newcommand{\rpeframe}[2]{
+	\ifthenelse{ \boolean{slides} }
+	{
+		\begin{frame}
+			\frametitle{#1}
+			#2
+		\end{frame}
+	}
+	{
+		#2
+	}
+}
+
+\newcommand{\ifslide}[1]{
+	\ifthenelse{ \boolean{slides} }
+	{#1}
+	{}
+}
+
+\newcommand{\ifbook}[1]{
+	\ifthenelse{ \boolean{slides} }
+	{}
+	{#1}
+}
+
+\newcommand{\mylink}[2]{\href{#1}{\textcolor{blue}{#2}}}
+\newcommand{\myphotocredit}[2]{\newline\tiny{\href{#1}{\textcolor{gris-doux}{#2}}}}
+
+\newcommand{\abstractframe}[2]{
+\begin{frame}
+  \ifthenelse{ \boolean{slides} }{
+    \begin{block}{Résumé du thème}
+      \tiny{#1}
+    \end{block} }{
+    \begin{Sbox}
+      \begin{minipage}{6in}
+        \begin{center}\textbf{Résumé du chapitre}\end{center}
+        \paragraph{}\textit{#1}
+      \end{minipage}
+      \end{Sbox}
+      \fbox{\TheSbox}
+  }
+  \begin{center}
+    \ifthenelse{ \boolean{slides} }
+    {\includegraphics[width=220px]{#2}}{
+      \begin{figure}[hb]
+        \begin{center}
+          \includegraphics[width=\textwidth]{#2}
+          \caption{Focus du chapitre}
+        \end{center}
+      \end{figure}
+      \newpage
+    }
+  \end{center}
+\end{frame}
+}
+
+\newcommand{\demoframe}[2]{
+  \begin{frame}{#1}
+    \begin{center}
+    #2
+    \end{center}
+  \end{frame}
+}
+
+\newcommand{\sectionslide}[1]{
+  \begin{frame}
+    \begin{center}
+      \textbf{#1}
+    \end{center}
+  \end{frame}
+}
+
+\newcommand{\mysection}[1]{
+  \ifthenelse{ \boolean{slides} }{
+     \section{#1}
+     \sectionslide{#1}
+  }{
+     \chapter{#1}
+  }
+}
+
+\newcommand{\mysubsection}[1]{
+  \ifthenelse{ \boolean{slides} }{
+     \subsection{#1}
+     \sectionslide{#1}
+  }{
+     \section{#1}
+  }
+}
+
+\newcommand{\mysubsubsection}[1]{
+  \ifthenelse{ \boolean{slides} }{
+     ERROR: No subsubsection for slides
+     #1
+  }{
+     \subsection{#1}
+  }
+}
+
+\newcommand{\mysubsubsubsection}[1]{
+  \ifthenelse{ \boolean{slides} }{
+     ERROR: No subsubsubsection for slides
+     #1
+  }{
+     \subsubsection{#1}
+  }
+}

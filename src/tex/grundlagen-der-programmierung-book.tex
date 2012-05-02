@@ -1,0 +1,28 @@
+\documentclass[a4paper,10pt]{book}
+\usepackage{beamerarticle}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[pdftex,colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{fullpage}
+\usepackage{times}
+\usepackage{fancybox}
+\renewcommand{\normalfont}{\sffamily} % Pour avoir de "l'arial"
+
+\newboolean{slides}
+\setboolean{slides}{false}
+
+\newcommand{\booktitle}[0]{Cours d'introduction}
+
+\input{parts/commons}
+
+\begin{document}
+\input{parts/cover.tex}
+\tableofcontents
+\include{main}
+\end{document}
