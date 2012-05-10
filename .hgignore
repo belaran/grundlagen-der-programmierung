@@ -1,2 +1,7 @@
 delivery
+.classpath
+.project
+bin
 target
+.class
+.bak
