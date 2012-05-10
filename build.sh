@@ -23,7 +23,7 @@ setBuildBook() {
 }
 
 setQcm() {
-    if [ -z ${qcm} ] ; then readonly qcm="${prefix}-qcm-1"; fi
+    if [ -z ${qcm} ] ; then readonly qcm="${prefix}-mcf"; fi
 }
 
 run_latex() {
