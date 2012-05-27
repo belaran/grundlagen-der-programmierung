@@ -1,100 +1,126 @@
-\section{Session 02}
 
 \begin{question}{
-Which of the following command line \textbf{compile} the program \textit{HelloWorld}:
+What is the point of using an IDE instead of a simple text editor when writing a program ?
 }
-  \false java HelloWorld.java
-  \true  javac HelloWorld.java
-  \false javac HelloWorld.class
-  \false javac
+  \false syntax coloration is nicer to look at
+  \true  it speed up the development and ensure the code produced is of good quality
+  \false an IDE ease working in group on a code
+  \false the IDE can compile and check if the code is valid
 \end{question}
 
 \begin{question}{
-Which of the following command line \textbf{execute} the program {HelloWorld}:
+When trying to resolve a problem or a defect in a program, how should try to find the root cause ?
 }
-  \false java HelloWorld.java
-  \false java HelloWord.class
-  \true java HelloWorld
-  \false javac HelloWorld.class
+  \false modify the code to add "print" statement describing the content of the variable
+  \false look carefully at the code, to ascertain which part of it is not working properly
+  \true use the debugger
+  \false reboot your work station, and see if it does fix the problem
 \end{question}
 
 \begin{question}{
-Which of the following command display the files and directory of the current directory:
+What is a \textbf{breakpoint} ?
 }
-  \false pwd
-  \false cd
-  \false man
-  \true ls
+  \false the defective part of a program
+  \false a way to see interactively the content of a variable while a program is running
+  \false a simple kind of variable
+  \true a debugger mechanism to run the program up to a certain point
 \end{question}
 
 \begin{question}{
-What is the purpose of comment in code ?
+What is the purpose of an 'if' statement ?
 }
-  \false better formatting, to make the file easy to ready
-  \false to disable part of the code, when no longer needed
-  \true to provide information on how the associated code works
-  \false to pass metadata to the code
+  \false allow to easily repeat a piece of code
+  \false assign a new value to a variable
+  \true a simple form of control flow to direct the program to execute a certain portion of the code
+  \false a mechanism to test if two variables have the same content
 \end{question}
 
 \begin{question}{
-How to add copyright and legal stuff on a piece of code
+Check the \textbf{invalid} statement about it:\\
+\small{
+  \texttt{
+    if ( a == b ) \{ \\
+      \vspace{4pt} System.out.println("a == b"); \\
+    \} else \{  \\
+      \vspace{4pt} System.out.println("a != b");  \\
+    \}
+  }
 }
-  \false use special part of the file that won't be compile
-  \false you can't, you have to add a file called COPYRIGHT next to the source code
-  \true as a comment, on top of the file
-  \false source code cannot be copyright
+}
+  \false if the content of the variable 'a' and 'b' are the same, "a == b" is printed on the screen
+  \false if the content of the variable 'a' and 'b' differs, "a != b" is printed on the screen
+  \true if the content of the variable 'a' and 'b' differs, "a == b" is printed on the screen
+  \false if the content of the variable 'a' and 'b' are not the same, "a != b" is printed on the screen
 \end{question}
 
 \begin{question}{
-What is a variable ? What does it do ?
+What is the purpose of a 'for' statement ?
 }
-  \false a variable is way to do operation
-  \false a variable is used to store number in memory
-  \true a variable allocated enough memory to store a typed information
-  \false a variable is an unsigned int
+  \false a simple mechanism to assign a new value to a variable
+  \true iterate over a piece of code a certain number of time
+  \false test if a variable is 'true'
+  \false allocate more memory to a variable
 \end{question}
 
 \begin{question}{
-Which of the following datatype does \textbf{not} store an integer value:
+Look at the following piece of code and pick the \textbf{invalid} statement about it:\\
+\small{
+  \texttt{
+    for ( int i = 0 ; i < 10 ; i++ ) \{ \\
+      \vspace{4pt} System.out.println("current iteration is:" + i); \\
+    \}
+  }
 }
-  \false int
-  \false short
-  \false byte
-  \true char
+}
+  \false the statement 'i++' is just an abbreviation for 'i = i + 1'
+  \false at some point, this program will print "current iteration is:8"
+  \false the value of the variable 'i' will be, at start, 0
+  \true at some point, this program will print "current iteration is:10"
 \end{question}
 
 \begin{question}{
-Which of the following datatype \textbf{does} store its information on 2 bits:
+What is the purpose of a 'while' statement ?
 }
-  \false short
-  \false byte
-  \true boolean
-  \false char
+  \false test if an operation returns true
+  \false allocate more memory to a variable
+  \true iterate over a piece of code until a certain condition is no longer verified (no longer
+  returns 'true')
+  \false it's a short cut to write an 'if' statement and 'for' statement
 \end{question}
 
 \begin{question}{
-Which of the following operatir is \textbf{not} aplicable to the data type \texttt{char}:
+Look at the following piece of code and pick the \textbf{invalid} statement about it:\\
+\small{
+\texttt{
+    int[] array = \{ 1,5,4,-6,7,9 \}; \\
+    int i = 0; \\
+    while ( array[i] > 0 ) \{ \\
+      \vspace{4pt} System.out.println("Array[:" + i + "] = " + array[i]); \\
+      \vspace{4pt} i++; \\
+    \}
 }
-  \false no operator can be applied to char variables
-  \false lower than equal (<)
-  \true addition (+)
-  \false equality (==)
+}
+}
+  \false this code will print 1,5,4
+  \true this code will print all the values of the array
+  \false 'array[i]' will access the value of the array stored at the position equals to the value of 'i'
+  \false The '-6' will never be printed on the screen
 \end{question}
 
 \begin{question}{
-Which of the following operator is \textbf{applicable} to the data type \texttt{char}:
+In the following statements regarding functions, check the one which is \textbf{invalid}:
 }
-  \false substraction (-)
-  \false addition (+)
-  \false division (/)
-  \true greater than equal (>)
+  \false reuse code easily
+  \false make code easier to read
+  \true implements a functionality (feature) of the program
+  \false hide complexity
 \end{question}
 
 \begin{question}{
-What is an \textbf{array} ?
+Which of the following item is \textbf{not} a part of a function:
 }
-  \false a set of values of different types
-  \false a variable containing a reference to one value
-  \false a variable holding a reference to the first item of a set of values of different data types
-  \true a variable holding a reference to the first item of a set of values of the same data types
+  \false the return type
+  \false the arguments
+  \false the function body
+  \true an if statement
 \end{question}
