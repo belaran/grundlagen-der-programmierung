@@ -245,29 +245,3 @@
     \end{block}
   \end{frame}
 }
-
-\section{Error Handling}
-\ifslide{
- \begin{frame}
-    \begin{block}{Structure to handle error in programming language}
-      \begin{itemize}
-        \item do nothing
-        \begin{itemize}
-          \item program crashes
-          \item no information on the root cause
-        \end{itemize}
-        \item use "status code"
-        \begin{itemize}
-          \item functions can't return value
-          \item leads to message such as "Error 400 happened"
-          \item needs to have an error database to translate the status code
-        \end{itemize}
-        \item return a complete structure describing in length the error
-        \begin{itemize}
-          \item ideal, but...
-          \item ...still remove the option of having returning value
-        \end{itemize}
-      \end{itemize}
-    \end{block}
- \end{frame}
-}
