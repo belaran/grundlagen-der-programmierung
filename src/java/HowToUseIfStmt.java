@@ -32,7 +32,7 @@ public class HowToUseIfStmt {
 		// array 'args'. Use an if to check that there is
 		// indeed 2 items in the array. If not exit the
 		// program with System.exit(1);
-        if ( args.lenght() != 2 ) {
+        if ( args.length != 2 ) {
             System.out.println("This program requires 2 arguments");
             System.exit(1);
         }
