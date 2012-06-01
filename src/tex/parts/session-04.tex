@@ -4,208 +4,28 @@
   \begin{frame}{Agenda}
     \begin{block}{Session outline}
       \begin{itemize}
-        \item how to use an IDE (Eclipse)
-        \item control structure (if, for, while, .switch,...)
         \item functions
+        \item data conversion
+        \item data structure (classe)
         \item error handling
-      \end{itemize}
-    \end{block}
-  \end{frame}
-
-  \section{Using an IDE: Eclipse}
-
-  \begin{frame}{What is an Integrated Development Environment ?}
-    \begin{block}{Main features}
-      \begin{itemize}
-        \item Advanced file editing
-        \begin{itemize}
-          \item highlight syntax with colors
-          \item syntax checker
-          \item auto completion
-        \end{itemize}
-        \item Program building
-        \begin{itemize}
-          \item compilation
-          \item run program inside the IDE
-        \end{itemize}
-        \item \textbf{debugger}
-        \begin{itemize}
-          \item execute program \textbf{interactively}
-          \item expose variables content, allow to modify them direclty
-        \end{itemize}
+        \item objects and methods
       \end{itemize}
     \end{block}
   \end{frame}
 }
+
 
 \ifslide{
-  \begin{frame}{A short Eclipse Tutorial}
-    \begin{block}{Eclipse IDE}
-      \begin{itemize}
-        \item Open Source, java based, IDE
-        \item Most used IDE in the World
-        \item Focus on Java programming but also used for other technologies
-        \item Cross platform program
-        \item Speed up development (up to 40\% !)
-      \end{itemize}
-    \end{block}
-  \end{frame}
 
-
-  \begin{frame}{Use Eclipse (1/2)}
-    \begin{block}{Instructions}
-      \begin{itemize}
-        \item Look for Eclipse in the Application launcher menu, and start it
-        \item Eclipse will ask for the location of the \textbf{workspace}
+    \begin{frame}{No session on the 15.06}
+      \begin{block}{No class on the 15.06}
         \begin{itemize}
-          \item this location is where Eclipse stores the project's files
-          \item simply click on "OK" and accept the default location
+          \item postpone to 22.06 ?
+          \item postpone to 06.07 ?
         \end{itemize}
-        \item Go to File->New->Java Project to create a new, empty, Java project.
-        \item Use your first and lastname (ex:romain-pelisse) as project name and click sur "Finish"
-        \item \textbf{Right-click} on the folder 'src' and select the 'import' options:
-        \begin{itemize}
-          \item a wizard will appear to specifify the import method
-          \item select General->File System and click on "Next"
-          \item use the "Browser" button to select the "Desktop" folder
-          \item select all the java sources files (.java) on Deskopt (all files from the previous
-          session)
-          \item click on "Finish" to import all of them
-        \end{itemize}
-      \end{itemize}
-    \end{block}
-  \end{frame}
+      \end{block}
+    \end{frame}
 
-  \begin{frame}{Use Eclipse (2/2)}
-    \begin{block}{Instructions}
-      \begin{itemize}
-        \item Compile, run and \textbf{debug}:
-        \begin{itemize}
-          \item Eclipse will compile for you, automatically any Java files in the src/ folder -
-          nothing to do !
-          \item To run a Java file, right-click on the file and select Run as->Java Application
-          \item To Debug a program, right-click on the file and select Debug as->Java Application
-        \end{itemize}
-      \end{itemize}
-    \end{block}
-  \end{frame}
-}
-
-\ifslide {
-  \begin{frame}{Use Eclipse's debugger}
-    \begin{block}{Instructions}
-      \begin{itemize}
-        \item Double click on the column on the left of the source code to set a \textbf{breakpoint} - see picture below
-        \item Run the program with the debugger (Debug as->Java Application) and ...
-        \begin{itemize}
-          \item run the program step-by-step
-          \item examine the values of each available variables
-          \item set a breakpoint and execute the program up to it
-        \end{itemize}
-      \end{itemize}
-    \end{block}
-  \end{frame}
-
-   \section{Control Structure}
-
-   \begin{frame}{The 'if' statement}
-     \begin{block}{The 'if' statement}
-      \begin{itemize}
-        \item simple form of control flow statement.
-        \item directs the program to execute a certain section of code...
-        \item ...if and only if the test evaluates to true
-        \item in Java, a the test must be boolean expression.
-       \end{itemize}
-     \end{block}
-
-     \begin{block}{Instructions}
-       \begin{itemize}
-         \item Download the HowToUseIfStmt.java file and save it on the Desktop
-         \item Import the file in your project as you did before
-         \item Implements the program as defined in the source file
-         \item To add an 'if' statement to the code, use the autocompletion feature of Eclipse
-         (crtl+space)
-       \end{itemize}
-     \end{block}
-   \end{frame}
-
-}
-
-\ifslide{
-   \begin{frame}{The 'for' statement}
-     \begin{block}{The 'for' statement}
-      \begin{itemize}
-        \item execute a block of code continuously
-        \item consists of tree parts :\tiny{
-        \begin{description}
-          \item[initialization]: an expression that sets the value of the loop control variable,
-          executed only once.
-          \item[condition]:  a boolean expression that tests the loop control variable against a target
-          value and hence works as a loop terminator.
-          \item[Increment/decrement]: an expression that increments or decrements the loop
-          control variable.
-        \end{description}
-        }
-       \end{itemize}
-     \end{block}
-
-     \begin{block}{Instructions}
-       \begin{itemize}
-         \item Using Eclipse, copy the file HowToUseIfStmt.java to HowToUseForLoop.java
-         \item This new program accepts only one character values as arguments:\texttt{java
-         HowToUseForLoop 1 2 3 4 5 6 7} - there no more bound for the number of arguments.
-         \item Modify the program accordingly
-         \item To add a 'for' statement to the code, use the autocompletion feature of Eclipse
-         (crtl+space)
-       \end{itemize}
-     \end{block}
-   \end{frame}
-
-   \begin{frame}{The 'while' statement}
-     \begin{block}{The 'while' statement}
-       \begin{itemize}
-         \item execute a block of code continuously...
-         \item ... as long as the condition is true.
-         \item mix between an 'if' and a 'while'
-         \item a \mylink{http://www.roseindia.net/java/beginners/DoWhile.shtml}{do...while} statement also exist - to skip the first evaluation.
-       \end{itemize}
-     \end{block}
-
-     \begin{block}{Instructions}
-       \begin{itemize}
-         \item Download the file WhyWhileStmtAreAlsoCool.java
-         \item Modify the program as requested in the code
-       \end{itemize}
-     \end{block}
-   \end{frame}
-}
-
-\ifslide{
-   \begin{frame}{The 'switch' statement}
-     \begin{block}{The 'switch' statement}
-      \begin{itemize}
-        \item an alternative to a series of 'else if'
-        \item allows for any number of possible execution paths
-        \item works with the byte, short, char, and int primitive data types
-        \item works with enumerated types (we'll see them later)
-        \item body of a switch statement is known as a switch block.
-        \item Any statement immediately contained by the switch block may be labeled:
-        \begin{itemize}
-          \item with one label
-          \item several lables
-          \item or the default label
-        \end{itemize}
-      \end{itemize}
-     \end{block}
-
-     \begin{block}{Remarks}
-       \begin{itemize}
-         \item powerful but rather complex
-         \item seldom used
-         \item generally just to remove a messy, long if statement
-       \end{itemize}
-     \end{block}
-   \end{frame}
 }
 
 \section{Functions}
@@ -233,18 +53,152 @@
   \begin{frame}
     \begin{block}{Functions syntax}
       \begin{center}
-        \includegraphics[scale=0.2]{../img/a-simple-java-function.png}
+        \includegraphics[scale=0.3]{../img/a-simple-java-function.png}
       \end{center}
     \end{block}
+  \end{frame}
 
-    \begin{block}{Instructions}
+  \begin{frame}
+    \begin{block}{Exercice 1: Create a simple function to add two integer}
       \begin{itemize}
-        \item Download and import the file called LenghtyProgram
-        \item Modify the code according to the instruction
+        \item Create a Java file in your project called FunctionByExample with a right-click on the
+        folder containing the Java source files
+        \item \textit{Remark: Check the option "public static void main..." in the form
+        \item Add to the class the following function:
+        \begin{itemize}
+          \item \texttt{public static int add(int a, int b)}
+          \item implements the body of the function
+        \end{itemize}
+        \item Remark: the function must be \textbf{within} the class definition
+        \item in the \textbf{main} function add a call to the add function:
+        \begin{itemize}
+          \item \texttt{FunctionByExample.add(1,2)}
+        \end{itemize}
+      \end{itemize}
+    \end{block}
+  \end{frame}
+
+
+  \begin{frame}
+    \begin{block}{Exercice 1: Reduce code duplication in using functions}
+      \begin{itemize}
+        \item Import your Eclipse project the file called LenghtyProgram
+        \item Follow the instructions and modify the code accordingly
       \end{itemize}
     \end{block}
   \end{frame}
 }
+
+\section{Data Conversion}
+\ifslide{
+  \begin{frame}
+    \begin{block}{Data conversion}
+      \begin{itemize}
+        \item variables holds \textbf{typed} data
+        \item need to convert one to an other:
+        \begin{itemize}
+          \item an integer (3) to a float (3.0)
+          \item a char (c) to the
+          \item a String ("1.0") to a float (1.0)
+        \end{itemize}
+        \item in Java, this can be achieved by some provided functions:
+        \begin{itemize}
+          \item \texttt{int value = Integer.valueOf("1.0");}
+          \item \texttt{short value = Short.valueOf(1.0f);}
+          \item \texttt{float value = Float.valueOf(1);}
+        \end{itemize}
+      \end{itemize}
+    \end{block}
+  \end{frame}
+}
+\section{Constants}
+\ifslide{
+  \begin{frame}
+    \begin{block}{Constants}
+      \begin{itemize}
+        \item some variable never changes
+        \item can be prefixed by keyword \texttt{final}
+        \item to prevent any - unwanted, changes later in the program
+        \item convention is, in most languages, to use uppercase variable:
+        \begin{itemize}
+          \item \texttt{final long EARTH\_DIAMETER = 12,714;}
+          \item \texttt{final float PIE = 3. 1415926535;}
+        \end{itemize}
+      \end{itemize}
+    \end{block}
+  \end{frame}
+}
+
+\ifslide{
+
+  \begin{frame}
+    \begin{block}{Exercice 2: Increase code structuration using functions}
+      \begin{itemize}
+        \item Import your Eclipse project the file called TiedlyCoupledBusinessCode
+        \item Follow the instructions and modify the code accordingly
+      \end{itemize}
+    \end{block}
+  \end{frame}
+}
+
+\section{Data Structure}
+\ifslide{
+  \begin{frame}
+    \begin{block}{What to modelize complex data ?}
+      \begin{itemize}
+        \item concept of \textbf{data structure}
+        \item define a new \textbf{type} of variable
+        \item that regroups all variables
+        \item in Java, a data structure is called \textbf{class}
+      \end{itemize}
+    \end{block}
+    \begin{center}
+      \includegraphics[scale=0.4]{img/datastructure.png}
+    \end{center}
+  \end{frame}
+
+  \begin{frame}
+    \begin{block}{How to use a data structure ?}
+      \begin{itemize}
+        \item inner variables can be accessed directly
+        \begin{itemize}
+          \item \texttt{steuerzahler.id = 120304;}
+        \end{itemize}
+        \item structure can be passed around di
+        \begin{itemize}
+          \item \texttt{public static void calculateTax(Steuerzahler steuerzahler) ...}
+        \end{itemize}
+      \end{itemize}
+    \end{block}
+  \end{frame}
+
+  \begin{frame}
+    \begin{block}{Designing a data structure}
+      \begin{itemize}
+        \item Create a new \textbf{class}:
+        \begin{itemize}
+          \item Right click on the folder containing your source code (inside Eclipse)
+          \item Select New...->Java Class
+          \item Name the new class Consultant
+        \end{itemize}
+        \item a Consultant's data structure should regroup the following information:
+        \begin{itemize}
+          \item an unique id value
+          \item years of experience
+          \item a country code (where he works) identified by two letter (DE, UK, FR...)
+          \item cost by day ratio (how much the consultant is sold by day)
+          \item a phone number
+        \end{itemize}
+        \item implements the data structure
+        \item add the following function to the class and implement it:
+        \begin{itemize}
+          \item \texttt{public static int consultantCostFor(Consultant consultant, int nbDays);}
+        \end{itemize}
+      \end{itemize}
+    \end{block}
+  \end{frame}
+}
+
 
 \section{Error Handling}
 \ifslide{
@@ -267,7 +221,23 @@
           \item ideal, but...
           \item ...still remove the option of having returning value
         \end{itemize}
+        \item hence appeared the idea of \textbf{exception}
+        \begin{itemize}
+          \item returns a complete structure describing the error
+          \item does not modify the return type of a function
+          \item can be explicitly catched or not
+          \item can be explicitly thrown or not
+        \end{itemize}
       \end{itemize}
     \end{block}
  \end{frame}
+
+ \begin{frame}
+   \begin{center}
+     \includegraphics[scale=0.30]{img/exception-in-java.png}
+   \end{center}
+ \end{frame}
 }
+
+
+
