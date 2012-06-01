@@ -55,10 +55,9 @@ public class TiedlyCoupledBusinessCode {
 			System.exit(INVALID_CHILDREN);
 		}
 		
-		// ok, now, we can actually do something somewhat useful ! Yeppi !
-		final float[] taxPercent = { 0f, 0.4f, 0.3f, 0.2f, 0.15f, 0.1f, 0.05f };
-		
-		float taxPart = taxPercent[taxClass] * revenue;
+		// ok, now, we can actually do something somewhat useful ! Yeppi !		
+float taxPart = taxPercentForTaxClas(taxClass) * 
+			revenue;
 		
 		if ( nbChildren > 0 ) {
 			taxPart = taxPart / nbChildren;
@@ -66,4 +65,32 @@ public class TiedlyCoupledBusinessCode {
 		
 		System.out.println("Tax to pay:"+ taxPart);
 	}
+	
+	public static float taxPercentForTaxClas(int taxClass) {
+		final float[] taxPercent = { 0f, 0.4f, 0.3f, 0.2f, 0.15f, 
+				0.1f, 0.05f };
+
+		return taxPercent[taxClass];
+	}
+
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
